@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ChartController@index');
 
 Route::get('import-export', 'ImportController@importExport');
 Route::post('import', 'ImportController@import');
