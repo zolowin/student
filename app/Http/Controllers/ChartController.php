@@ -9,6 +9,7 @@ class ChartController extends Controller
 {
     public function index()
     {
+        $totalStudent = count(Student::all());
         $maleChart = Student::where('gender', 1)->get();
         $femaleChart = Student::where('gender', 2)->get();
 
@@ -41,7 +42,7 @@ class ChartController extends Controller
             ->get());
         $dataQuarter = [$data1Quarter, $data2Quarter, $data3Quarter, $data4Quarter];
 
-        return view('app', compact('maleChart', 'femaleChart', 'dataMaleMonth', 'dataFemaleMonth', 'dataQuarter'));
+        return view('app', compact('totalStudent', 'maleChart', 'femaleChart', 'dataMaleMonth', 'dataFemaleMonth', 'dataQuarter'));
     }
 
 }

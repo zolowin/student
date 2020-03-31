@@ -19,7 +19,7 @@
                     <button class="btn btn-success" id="optGender">Theo giới tính</button>
                     <button class="btn btn-success" id="optMonth">Theo tháng sinh</button>
                     <button class="btn btn-success" id="optQuarter">Theo quý sinh</button>
-
+                    <p class="float-right font-weight-bold">Tổng số học sinh : {{ $totalStudent }}</p>
                 </div>
                 <div id="gender">
                     <canvas id="gender-chart"></canvas>
