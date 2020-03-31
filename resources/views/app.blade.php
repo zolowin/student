@@ -9,47 +9,88 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="card mt-4">
             <div class="card-header">
                 Thống kê danh sách trúng tuyển vào lớp 10 THPT Quốc Học Huế năm 2016-2017
             </div>
             <div class="card-body">
-                <canvas id="myChart"></canvas>
+                
+                <canvas id="pie-chart"></canvas>
                 <input type="hidden" id="male" value="{{ count($maleChart) }}">
                 <input type="hidden" id="female" value="{{ count($femaleChart) }}">
             </div>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script>
-        let bienY = [$('#male').val(), $('#female').val()];
-        let myChart = document.getElementById('myChart').getContext('2d');
+        let bienX = +[$('#male').val()];
+        let bienY = +[$('#female').val()];
 
-        // Global Options
         Chart.defaults.global.defaultFontFamily = 'Lato';
         Chart.defaults.global.defaultFontSize = 18;
         Chart.defaults.global.defaultFontColor = '#777';
+        var data = [{
+            data: [bienX, bienY],
+            labels: ["số học sinh"],
+            backgroundColor: [
+                "#B27200",
+                "#d21243"
+            ],
+            borderColor: "#fff"
+        }];
 
-        let gender_Chart = new Chart(myChart, {
-            type: 'pie',
-            data: {
-                labels: ['nam', 'nữ'],
-                datasets: [{
-                    label: 'số học sinh',
-                    data: bienY,
-                    backgroundColor: ['khaki', 'cyan']
-                }]
+        var options = {
+            responsive : true,
+            title : {
+                display : true,
+                text : 'Theo giới tính (%)'
             },
-            option: {
-                title: {
-                    display: true,
-                    text: 'Danh sách học sinh trúng tuyển vào lớp 10 Quốc Học theo giới tính',
-                    fontSize: 25
+            legend : {
+                position : 'bottom',
+            },
+            tooltips: {
+                enabled: true
+            },
+            plugins: {
+                datalabels: {
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(0)+"%";
+                        return percentage;
+                    },
+                    color: '#fff',
+                    anchor : 'end',
+                    align : 'start',
+                    offset : -18,
+                    borderWidth : 2,
+                    borderColor : '#fff',
+                    borderRadius : 25,
+                    backgroundColor : (context) => {
+                        return context.dataset.backgroundColor;
+                    }
+                    
                 }
             }
+        };
+
+
+        var ctx = document.getElementById("pie-chart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                datasets: data,
+                labels : ['nam', 'nữ'],
+            },
+            options: options
         });
+
+
     </script>
 
 </body>
