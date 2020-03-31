@@ -13,12 +13,12 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
-        $month= mt_rand(1, 12);
- 
-        $day= mt_rand(1, 28); 
+        
         for($j = 0; $j < 10; $j ++){
             for($i = 0; $i < 400; $i++) {
                 $year = 199 . $j;
+                $month= mt_rand(1, 12);
+                $day= mt_rand(1, 28);
                 $randomDate = $year . "-" . $month . "-" . $day;
                 DB::table('students')->insert([
                     'name' => Str::random(10),
