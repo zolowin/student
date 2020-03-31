@@ -12,7 +12,7 @@
     <div class="container">
         <div class="card mt-4">
             <div class="card-header">
-                Thống kê danh sách trúng tuyển vào lớp 10 THPT Quốc Học Huế năm 2016-2017
+                Thống kê danh sách trúng tuyển vào lớp 10 THPT Quốc Học Huế năm 2017-2018
             </div>
             <div class="card-body">
                 <div class="text-center">
