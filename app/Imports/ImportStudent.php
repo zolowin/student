@@ -22,6 +22,7 @@ class ImportStudent implements ToModel, WithHeadingRow
             'name' => $row['name'],
             'gender' => $row['gender'],
             'dob' => $dob,
+            'year' => $row['year']
         ]);
     }
 }

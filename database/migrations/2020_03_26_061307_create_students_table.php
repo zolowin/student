@@ -17,7 +17,8 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->tinyInteger('gender');
-            $table->date('dob');
+            $table->string('dob');
+            $table->integer('year');
             $table->timestamps();
         });
     }
