@@ -334,6 +334,8 @@
         // let year = $('#year').val();
         
         $(document).ready(function() {
+            console.log(window.location.href)
+            if(window.location.href != 'http://127.0.0.1:8000/')
             document.getElementById('select-year').value = window.location.href;
         })
     </script>
