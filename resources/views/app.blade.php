@@ -31,17 +31,17 @@
                     <button class="btn btn-success" id="optQuarter">Theo quý</button> -->
                     <p class="float-right font-weight-bold">Tổng số học sinh : {{ $totalStudent }}</p>
                 </div>
-                <div id="gender">
+                <div id="gender" class="mt-2">
                     <canvas id="gender-chart"></canvas>
                     <input type="hidden" id="male" value="{{ count($maleChart) }}">
                     <input type="hidden" id="female" value="{{ count($femaleChart) }}">
                 </div>
-                <div id="month">
+                <div id="month" class="mt-2">
                     <canvas id="month-chart"></canvas>
                     <input type="hidden" id="dataMaleMonth" value="{{json_encode($dataMaleMonth)}}">
                     <input type="hidden" id="dataFemaleMonth" value="{{json_encode($dataFemaleMonth)}}">
                 </div>
-                <div id="quarter">
+                <div id="quarter" class="mt-2">
                     <canvas id="quarter-chart"></canvas>
                     <input type="hidden" id="dataQuarter" value="{{json_encode($dataQuarter)}}">
                 </div>
