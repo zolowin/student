@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
-use Faker\Factory as Faker;
+// use Faker\Factory as Faker;
 
 class StudentSeeder extends Seeder
 {
@@ -28,16 +28,16 @@ class StudentSeeder extends Seeder
         //         ]);
         //     }
         // }
-        $faker = Faker::create();
+        // $faker = Faker::create();
         $limit =  4000;
         
         for ($i = 0; $i < $limit; $i++) {
             $month= mt_rand(1, 12);
             $day= mt_rand(1, 28);
             DB::table('students')->insert([
-                'name' => $faker->name,
+                'name' => Str::random(10),
                 'gender' => rand(1,2),
-                'dob' => mt_rand(1995,2005)."/".$month."/".$day,
+                'dob' => mt_rand(1995,2005)."-".$month."-".$day,
                 'year_id'=> mt_rand(1,10)
             ]);
         }

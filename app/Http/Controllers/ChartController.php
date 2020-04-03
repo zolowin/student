@@ -30,13 +30,13 @@ class ChartController extends Controller
             $male = Student::where('gender', 1)
                             ->whereMonth('dob', '=', $i)
                             ->where('year_id', $year)
-                            ->get();;
+                            ->get();
             array_push($dataMaleMonth, count($male));
 
             $female = Student::where('gender', 2)
                             ->whereMonth('dob', '=', $i)
                             ->where('year_id', $year)
-                            ->get();;
+                            ->get();
             array_push($dataFemaleMonth, count($male));
         }
 
