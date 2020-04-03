@@ -104,6 +104,6 @@ class ChartController extends Controller
                                     ->get()                         );
         $dataQuarter = [$data1Quarter, $data2Quarter, $data3Quarter, $data4Quarter];
 
-        return view('app', compact('year', 'totalStudent', 'maleChart', 'femaleChart', 'dataMaleMonth', 'dataFemaleMonth', 'dataQuarter'));
+        return view('app', compact('totalStudent', 'maleChart', 'femaleChart', 'dataMaleMonth', 'dataFemaleMonth', 'dataQuarter'));
     }
 }

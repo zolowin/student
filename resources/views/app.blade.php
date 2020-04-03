@@ -13,10 +13,8 @@
         <div class="card mt-4">
             <div class="card-header">
                 Thống kê danh sách trúng tuyển vào lớp 10 THPT Quốc Học Huế năm
-                @if(isset($year))
-                    <input type="hidden" id="year" value="{{ $year }}">
-                @endif
-                <select name="year" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            
+                <select id="select-year" name="year" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
                     <option value="{{ route('years', 10) }}">2019 - 2020</option>
                     @for($i = 9; $i > 0; $i--)
                     {{$j = $i - 1}}
@@ -333,13 +331,10 @@
         //     });
         // });
 
-        let year = $('#year').val();
+        // let year = $('#year').val();
+        
         $(document).ready(function() {
-            console.log($('div.card-header select').val(window.location.href))
-            if(window.location.href == $('div.card-header select').val())
-            {
-                
-            }
+            document.getElementById('select-year').value = window.location.href;
         })
     </script>
 
