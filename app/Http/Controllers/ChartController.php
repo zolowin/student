@@ -21,20 +21,20 @@ class ChartController extends Controller
                             ->get();
         $femaleChart = Student::where('gender', 2)
                             ->where('year_id',  $year)
-                            ->get();;
+                            ->get();;   
 
         $dataMaleMonth = [];
         $dataFemaleMonth = [];
 
         for ($i = 1; $i < 13; $i++) {
             $male = Student::where('gender', 1)
-                            ->whereMonth('dob', $i)
+                            ->whereMonth('dob', '=', $i)
                             ->where('year_id', $year)
                             ->get();;
             array_push($dataMaleMonth, count($male));
 
             $female = Student::where('gender', 2)
-                            ->whereMonth('dob', $i)
+                            ->whereMonth('dob', '=', $i)
                             ->where('year_id', $year)
                             ->get();;
             array_push($dataFemaleMonth, count($male));
