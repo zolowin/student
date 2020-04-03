@@ -61,8 +61,8 @@
             data: [bienX, bienY],
             labels: ["số học sinh"],
             backgroundColor: [
-                "#B27200",
-                "#d21243"
+                "#FF6633",
+                "#0099CC"
             ],
             borderColor: "#fff"
         }];
@@ -90,9 +90,9 @@
                         let percentage = (value * 100 / sum).toFixed(0) + "%";
                         return percentage;
                     },
-                    color: '#fff',
-                    anchor: 'end',
-                    align: 'start',
+                    color: '#222222',
+                    anchor: 'star',
+                    align: 'between',
                     offset: -18,
                     borderWidth: 2,
                     borderColor: '#fff',
@@ -116,6 +116,7 @@
             options: options
         });
     </script>
+    </hr>
     <script>
         Chart.defaults.global.defaultFontFamily = 'Lato';
         Chart.defaults.global.defaultFontSize = 18;
@@ -133,18 +134,18 @@
                         label: 'Nam',
                         data: dataMaleMonth,
                         backgroundColor: [
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200',
-                            '#B27200'
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF',
+                            '#00CCFF'
                         ],
                         borderColor: [
                             'rgba(255,99,132,1)',
@@ -166,18 +167,18 @@
                         label: 'Nữ',
                         data: dataFemaleMonth,
                         backgroundColor: [
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243',
-                            '#d21243'
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66',
+                            '#FFCC66'
                         ],
                         borderColor: [
                             'rgba(255, 159, 64, 1)',
@@ -233,10 +234,10 @@
             data: dataQuarter,
             labels: ["số học sinh"],
             backgroundColor: [
-                "#B27200",
-                "#d21243",
-                "#008080",
-                "#00FF66",
+                "#EE0000",
+                "#FF9933",
+                "#99FF66",
+                "#3399FF",
             ],
             borderColor: "#fff"
         }];
@@ -264,9 +265,9 @@
                         let percentage = (value * 100 / sum).toFixed(0) + "%";
                         return percentage;
                     },
-                    color: '#fff',
-                    anchor: 'end',
-                    align: 'start',
+                    color: '#000000',
+                    anchor: 'star',
+                    align: 'beetween',
                     offset: -18,
                     borderWidth: 2,
                     borderColor: '#fff',
