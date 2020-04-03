@@ -90,13 +90,9 @@
                         let percentage = (value * 100 / sum).toFixed(0) + "%";
                         return percentage;
                     },
-<<<<<<< HEAD
                     color: '#222222',
                     anchor: 'star',
                     align: 'between',
-=======
-                    color: '#fff',
->>>>>>> 703a6ef340a484553bb93d2b2210d975295d4cb4
                     offset: -18,
                     borderWidth: 2,
                     borderColor: '#fff',
@@ -269,13 +265,9 @@
                         let percentage = (value * 100 / sum).toFixed(0) + "%";
                         return percentage;
                     },
-<<<<<<< HEAD
                     color: '#000000',
                     anchor: 'star',
                     align: 'beetween',
-=======
-                    color: '#fff',
->>>>>>> 703a6ef340a484553bb93d2b2210d975295d4cb4
                     offset: -18,
                     borderWidth: 2,
                     borderColor: '#fff',
