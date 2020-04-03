@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'ChartController@index');
-Route::get('/quarter', 'ChartController@chartQuarter');
+Route::get('/{year}', 'ChartController@test')->name('years');
 
 
 Route::get('import-export', 'ImportController@importExport');

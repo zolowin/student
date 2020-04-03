@@ -12,13 +12,25 @@
     <div class="container">
         <div class="card mt-4">
             <div class="card-header">
-                Thống kê danh sách trúng tuyển vào lớp 10 THPT Quốc Học Huế năm 2017-2018
+                Thống kê danh sách trúng tuyển vào lớp 10 THPT Quốc Học Huế năm
+                @if(isset($year))
+                    <input type="hidden" id="year" value="{{ $year }}">
+                @endif
+                <select name="year" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                    <option value="{{ route('years', 10) }}">2019 - 2020</option>
+                    @for($i = 9; $i > 0; $i--)
+                    {{$j = $i - 1}}
+                    <option value="{{ route('years', $i) }}">
+                        {{201 . $j . " - " . 201 . $i}}
+                    </option>
+                    @endfor
+                </select>
             </div>
             <div class="card-body">
                 <div class="text-center">
                     <button class="btn btn-success" id="optGender">Theo giới tính</button>
-                    <button class="btn btn-success" id="optMonth">Theo tháng sinh</button>
-                    <button class="btn btn-success" id="optQuarter">Theo quý sinh</button>
+                    <button class="btn btn-success" id="optMonth">Theo tháng</button>
+                    <button class="btn btn-success" id="optQuarter">Theo quý</button>
                     <p class="float-right font-weight-bold">Tổng số học sinh : {{ $totalStudent }}</p>
                 </div>
                 <div id="gender">
@@ -110,7 +122,7 @@
         Chart.defaults.global.defaultFontFamily = 'Lato';
         Chart.defaults.global.defaultFontSize = 18;
         Chart.defaults.global.defaultFontColor = '#777';
-        
+
         var ctx = document.getElementById("month-chart");
         dataMaleMonth = JSON.parse($('#dataMaleMonth').val());
         dataFemaleMonth = JSON.parse($('#dataFemaleMonth').val());
@@ -281,10 +293,10 @@
         });
     </script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $("#month").hide();
             $("#quarter").hide();
-            $("#optGender").css( "background-color", "navy");
+            $("#optGender").css("background-color", "navy");
         });
 
         $(document).ready(function() {
@@ -292,9 +304,9 @@
                 $("#gender").hide();
                 $("#quarter").hide();
                 $("#month").show();
-                $("#optMonth").css( "background-color", "navy");
-                $("#optGender").css( "background-color", "green");
-                $("#optQuarter").css( "background-color", "green");
+                $("#optMonth").css("background-color", "navy");
+                $("#optGender").css("background-color", "green");
+                $("#optQuarter").css("background-color", "green");
             });
         });
 
@@ -303,23 +315,32 @@
                 $("#month").hide();
                 $("#quarter").hide();
                 $("#gender").show();
-                $("#optGender").css( "background-color", "navy");
-                $("#optMonth").css( "background-color", "green");
-                $("#optQuarter").css( "background-color", "green");
+                $("#optGender").css("background-color", "navy");
+                $("#optMonth").css("background-color", "green");
+                $("#optQuarter").css("background-color", "green");
             });
         });
 
-        
+
         $(document).ready(function() {
             $("#optQuarter").click(function() {
                 $("#gender").hide();
                 $("#month").hide();
                 $("#quarter").show();
-                $("#optQuarter").css( "background-color", "navy");
-                $("#optGender").css( "background-color", "green");
-                $("#optMonth").css( "background-color", "green");
+                $("#optQuarter").css("background-color", "navy");
+                $("#optGender").css("background-color", "green");
+                $("#optMonth").css("background-color", "green");
             });
         });
+
+        let year = $('#year').val();
+        $(document).ready(function() {
+            console.log($('div.card-header select').val(window.location.href))
+            if(window.location.href == $('div.card-header select').val())
+            {
+                
+            }
+        })
     </script>
 
 </body>

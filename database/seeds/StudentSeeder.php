@@ -32,11 +32,13 @@ class StudentSeeder extends Seeder
         $limit =  4000;
         
         for ($i = 0; $i < $limit; $i++) {
+            $month= mt_rand(1, 12);
+            $day= mt_rand(1, 28);
             DB::table('students')->insert([
                 'name' => $faker->name,
                 'gender' => rand(1,2),
-                'dob' => mt_rand(1995,2005)."/".$faker->month."/".$faker->dayOfMonth,
-                'year'=> mt_rand(2010,2020)
+                'dob' => mt_rand(1995,2005)."/".$month."/".$day,
+                'year_id'=> mt_rand(1,10)
             ]);
         }
     }
