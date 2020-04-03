@@ -91,8 +91,6 @@
                         return percentage;
                     },
                     color: '#fff',
-                    anchor: 'end',
-                    align: 'start',
                     offset: -18,
                     borderWidth: 2,
                     borderColor: '#fff',
@@ -265,8 +263,6 @@
                         return percentage;
                     },
                     color: '#fff',
-                    anchor: 'end',
-                    align: 'start',
                     offset: -18,
                     borderWidth: 2,
                     borderColor: '#fff',
