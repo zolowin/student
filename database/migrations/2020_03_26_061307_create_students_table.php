@@ -17,7 +17,7 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->tinyInteger('gender');
-            $table->string('dob');
+            $table->date('dob');
             $table->unsignedBigInteger('year_id');
             $table->foreign('year_id')->references('id')->on('years');
             $table->timestamps();
