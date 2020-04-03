@@ -29,7 +29,7 @@ class StudentSeeder extends Seeder
         //     }
         // }
         // $faker = Faker::create();
-        $limit =  200;
+        $limit =  4000;
         
         for ($i = 0; $i < $limit; $i++) {
             $month= mt_rand(1, 12);
