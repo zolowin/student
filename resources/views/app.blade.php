@@ -27,10 +27,10 @@
                 </select>
             </div>
             <div class="card-body">
-                <div class="text-center">
-                    <button class="btn btn-success" id="optGender">Theo giới tính</button>
+                <div class="">
+                    <!-- <button class="btn btn-success" id="optGender">Theo giới tính</button>
                     <button class="btn btn-success" id="optMonth">Theo tháng</button>
-                    <button class="btn btn-success" id="optQuarter">Theo quý</button>
+                    <button class="btn btn-success" id="optQuarter">Theo quý</button> -->
                     <p class="float-right font-weight-bold">Tổng số học sinh : {{ $totalStudent }}</p>
                 </div>
                 <div id="gender">
@@ -135,18 +135,18 @@
                         label: 'Nam',
                         data: dataMaleMonth,
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(255, 99, 132, 0.2)'
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200',
+                            '#B27200'
                         ],
                         borderColor: [
                             'rgba(255,99,132,1)',
@@ -168,18 +168,18 @@
                         label: 'Nữ',
                         data: dataFemaleMonth,
                         backgroundColor: [
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243',
+                            '#d21243'
                         ],
                         borderColor: [
                             'rgba(255, 159, 64, 1)',
@@ -293,45 +293,45 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
-            $("#month").hide();
-            $("#quarter").hide();
-            $("#optGender").css("background-color", "navy");
-        });
+        // $(document).ready(function() {
+        //     $("#month").hide();
+        //     $("#quarter").hide();
+        //     $("#optGender").css("background-color", "navy");
+        // });
 
-        $(document).ready(function() {
-            $("#optMonth").click(function() {
-                $("#gender").hide();
-                $("#quarter").hide();
-                $("#month").show();
-                $("#optMonth").css("background-color", "navy");
-                $("#optGender").css("background-color", "green");
-                $("#optQuarter").css("background-color", "green");
-            });
-        });
+        // $(document).ready(function() {
+        //     $("#optMonth").click(function() {
+        //         $("#gender").hide();
+        //         $("#quarter").hide();
+        //         $("#month").show();
+        //         $("#optMonth").css("background-color", "navy");
+        //         $("#optGender").css("background-color", "green");
+        //         $("#optQuarter").css("background-color", "green");
+        //     });
+        // });
 
-        $(document).ready(function() {
-            $("#optGender").click(function() {
-                $("#month").hide();
-                $("#quarter").hide();
-                $("#gender").show();
-                $("#optGender").css("background-color", "navy");
-                $("#optMonth").css("background-color", "green");
-                $("#optQuarter").css("background-color", "green");
-            });
-        });
+        // $(document).ready(function() {
+        //     $("#optGender").click(function() {
+        //         $("#month").hide();
+        //         $("#quarter").hide();
+        //         $("#gender").show();
+        //         $("#optGender").css("background-color", "navy");
+        //         $("#optMonth").css("background-color", "green");
+        //         $("#optQuarter").css("background-color", "green");
+        //     });
+        // });
 
 
-        $(document).ready(function() {
-            $("#optQuarter").click(function() {
-                $("#gender").hide();
-                $("#month").hide();
-                $("#quarter").show();
-                $("#optQuarter").css("background-color", "navy");
-                $("#optGender").css("background-color", "green");
-                $("#optMonth").css("background-color", "green");
-            });
-        });
+        // $(document).ready(function() {
+        //     $("#optQuarter").click(function() {
+        //         $("#gender").hide();
+        //         $("#month").hide();
+        //         $("#quarter").show();
+        //         $("#optQuarter").css("background-color", "navy");
+        //         $("#optGender").css("background-color", "green");
+        //         $("#optMonth").css("background-color", "green");
+        //     });
+        // });
 
         let year = $('#year').val();
         $(document).ready(function() {
