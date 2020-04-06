@@ -216,7 +216,7 @@
                 },
                 title: {
                     display: true,
-                    text: 'Theo tháng sinh (số học sinh)'
+                    text: 'Theo tháng (số học sinh)'
                 },
                 legend: {
                     position: 'bottom',
@@ -246,7 +246,7 @@
             responsive: true,
             title: {
                 display: true,
-                text: 'Theo quý sinh (%)'
+                text: 'Theo quý (%)'
             },
             legend: {
                 position: 'bottom',
